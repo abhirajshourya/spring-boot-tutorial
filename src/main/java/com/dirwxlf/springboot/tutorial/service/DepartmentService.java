@@ -1,6 +1,7 @@
 package com.dirwxlf.springboot.tutorial.service;
 
 import com.dirwxlf.springboot.tutorial.entity.Department;
+import com.dirwxlf.springboot.tutorial.error.DepartmentNotFoundException;
 
 import java.util.List;
 
@@ -9,7 +10,7 @@ public interface DepartmentService {
 
     public List<Department> fetchDepartmentList();
 
-    public Department fetchDepartmentById(Long departmentId);
+    public Department fetchDepartmentById(Long departmentId) throws DepartmentNotFoundException;
 
     public void deleteDepartmentById(Long departmentId);
 
