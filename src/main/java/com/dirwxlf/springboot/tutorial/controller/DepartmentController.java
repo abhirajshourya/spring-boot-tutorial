@@ -6,6 +6,7 @@ import com.dirwxlf.springboot.tutorial.service.DepartmentService;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.web.bind.annotation.*;
 
 import javax.validation.Valid;
@@ -47,5 +48,11 @@ public class DepartmentController {
     @GetMapping("/departments/name/{name}")
     public Department fetchDepartmentByName(@PathVariable("name") String departmentName){
         return departmentService.fetchDepartmentByName(departmentName);
+    }
+    @Value("${welcome.message}")
+    private String welcomeMessage;
+    @GetMapping("/")
+    public String helloWorld(){
+        return welcomeMessage;
     }
 }
