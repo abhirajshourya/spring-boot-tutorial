@@ -47,7 +47,7 @@ class DepartmentControllerTest {
         Mockito.when(departmentService.saveDepartment(inputDepartment))
                 .thenReturn(department);
 
-        mockMvc.perform(post("/departments")
+        mockMvc.perform(post("/api/v1/departments")
                         .contentType(MediaType.APPLICATION_JSON)
                         .content("{\n" +
                                 "    \"departmentName\":\"EE\",\n" +
@@ -62,7 +62,7 @@ class DepartmentControllerTest {
         Mockito.when(departmentService.fetchDepartmentById(1L))
                 .thenReturn(department);
 
-        mockMvc.perform(get("/departments/1")
+        mockMvc.perform(get("/api/v1/departments/1")
                 .contentType(MediaType.APPLICATION_JSON))
                 .andExpect(status().isOk())
                 .andExpect(jsonPath("$.departmentName").value(department.getDepartmentName()));

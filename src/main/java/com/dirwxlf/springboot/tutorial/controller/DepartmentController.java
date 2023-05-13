@@ -13,6 +13,7 @@ import javax.validation.Valid;
 import java.util.List;
 
 @RestController
+@RequestMapping("/api/v1")
 public class DepartmentController {
     @Autowired
     private DepartmentService departmentService;
