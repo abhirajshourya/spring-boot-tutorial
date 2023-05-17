@@ -1,10 +1,11 @@
-package com.dirwxlf.springboot.tutorial.service;
+package com.direwxlf.springboot.tutorial.service;
 
-import com.dirwxlf.springboot.tutorial.entity.Department;
-import com.dirwxlf.springboot.tutorial.error.DepartmentNotFoundException;
-import com.dirwxlf.springboot.tutorial.repository.DepartmentRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+
+import com.direwxlf.springboot.tutorial.entity.Department;
+import com.direwxlf.springboot.tutorial.error.DepartmentNotFoundException;
+import com.direwxlf.springboot.tutorial.repository.DepartmentRepository;
 
 import java.util.List;
 import java.util.Objects;
@@ -58,8 +59,8 @@ public class DepartmentServiceImpl implements DepartmentService {
     }
 
     @Override
-    public Department fetchDepartmentByName(String departmentName) {
-        return departmentRepository.findByDepartmentNameIgnoreCase(departmentName);
+    public List<Department> fetchDepartmentByName(String departmentName) {
+        return departmentRepository.findAllByDepartmentNameIgnoreCase(departmentName);
     }
 
 }

@@ -1,6 +1,5 @@
-package com.dirwxlf.springboot.tutorial;
+package com.direwxlf.springboot.tutorial;
 
-import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest

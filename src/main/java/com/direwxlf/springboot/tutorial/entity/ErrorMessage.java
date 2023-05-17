@@ -1,4 +1,4 @@
-package com.dirwxlf.springboot.tutorial.entity;
+package com.direwxlf.springboot.tutorial.entity;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;

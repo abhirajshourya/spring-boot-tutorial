@@ -1,13 +1,14 @@
-package com.dirwxlf.springboot.tutorial.controller;
+package com.direwxlf.springboot.tutorial.controller;
 
-import com.dirwxlf.springboot.tutorial.entity.Department;
-import com.dirwxlf.springboot.tutorial.error.DepartmentNotFoundException;
-import com.dirwxlf.springboot.tutorial.service.DepartmentService;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.web.bind.annotation.*;
+
+import com.direwxlf.springboot.tutorial.entity.Department;
+import com.direwxlf.springboot.tutorial.error.DepartmentNotFoundException;
+import com.direwxlf.springboot.tutorial.service.DepartmentService;
 
 import javax.validation.Valid;
 import java.util.List;
@@ -47,7 +48,7 @@ public class DepartmentController {
     }
 
     @GetMapping("/departments/name/{name}")
-    public Department fetchDepartmentByName(@PathVariable("name") String departmentName){
+    public List<Department> fetchDepartmentByName(@PathVariable("name") String departmentName){
         return departmentService.fetchDepartmentByName(departmentName);
     }
     @Value("${welcome.message}")

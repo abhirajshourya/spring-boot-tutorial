@@ -1,11 +1,12 @@
-package com.dirwxlf.springboot.tutorial.repository;
+package com.direwxlf.springboot.tutorial.repository;
 
-import com.dirwxlf.springboot.tutorial.entity.Department;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.autoconfigure.orm.jpa.DataJpaTest;
 import org.springframework.boot.test.autoconfigure.orm.jpa.TestEntityManager;
+
+import com.direwxlf.springboot.tutorial.entity.Department;
 
 import static org.junit.jupiter.api.Assertions.*;
 @DataJpaTest

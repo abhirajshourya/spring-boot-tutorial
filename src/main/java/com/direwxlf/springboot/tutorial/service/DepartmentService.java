@@ -1,9 +1,9 @@
-package com.dirwxlf.springboot.tutorial.service;
-
-import com.dirwxlf.springboot.tutorial.entity.Department;
-import com.dirwxlf.springboot.tutorial.error.DepartmentNotFoundException;
+package com.direwxlf.springboot.tutorial.service;
 
 import java.util.List;
+
+import com.direwxlf.springboot.tutorial.entity.Department;
+import com.direwxlf.springboot.tutorial.error.DepartmentNotFoundException;
 
 public interface DepartmentService {
     Department saveDepartment(Department department);
@@ -16,5 +16,5 @@ public interface DepartmentService {
 
     Department updateDepartment(Long departmentId, Department department);
 
-    Department fetchDepartmentByName(String departmentName);
+    List<Department> fetchDepartmentByName(String departmentName);
 }

@@ -1,8 +1,5 @@
-package com.dirwxlf.springboot.tutorial.controller;
+package com.direwxlf.springboot.tutorial.controller;
 
-import com.dirwxlf.springboot.tutorial.entity.Department;
-import com.dirwxlf.springboot.tutorial.error.DepartmentNotFoundException;
-import com.dirwxlf.springboot.tutorial.service.DepartmentService;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.mockito.Mockito;
@@ -11,6 +8,9 @@ import org.springframework.boot.test.autoconfigure.web.servlet.WebMvcTest;
 import org.springframework.boot.test.mock.mockito.MockBean;
 import org.springframework.http.MediaType;
 import org.springframework.test.web.servlet.MockMvc;
+
+import com.direwxlf.springboot.tutorial.entity.Department;
+import com.direwxlf.springboot.tutorial.service.DepartmentService;
 
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.*;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.jsonPath;

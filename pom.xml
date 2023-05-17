@@ -8,7 +8,7 @@
         <version>2.7.11</version>
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
-    <groupId>com.dirwxlf</groupId>
+    <groupId>com.direwxlf</groupId>
     <artifactId>spring-boot-tutorial</artifactId>
     <version>0.0.1-SNAPSHOT</version>
     <name>spring-boot-tutorial</name>
