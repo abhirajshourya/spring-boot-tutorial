@@ -19,7 +19,12 @@ spring:
       on-profile: dev
 welcome:
   message: Hello World, This is developer profile!
-
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+        exclude: "env,beans"
 ---
 spring:
   datasource:
