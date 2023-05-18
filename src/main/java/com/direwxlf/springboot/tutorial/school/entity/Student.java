@@ -1,6 +1,7 @@
 package com.direwxlf.springboot.tutorial.school.entity;
 
 import javax.persistence.Column;
+import javax.persistence.Embedded;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -21,7 +22,6 @@ import lombok.NoArgsConstructor;
 @Builder
 @Table(name = "tbl_student", uniqueConstraints = @UniqueConstraint(name = "emailId_unique", columnNames = "email_address"))
 public class Student {
-
     @Id
     @SequenceGenerator(name = "student_sequence", sequenceName = "student_sequence", allocationSize = 1)
     @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "student_sequence")
@@ -31,7 +31,7 @@ public class Student {
 
     @Column(name = "email_address", nullable = false)
     private String emailId;
-    private String guardianName;
-    private String guardianEmailId;
-    private String guardianContact;
+
+    @Embedded
+    private Guardian guardian;
 }
