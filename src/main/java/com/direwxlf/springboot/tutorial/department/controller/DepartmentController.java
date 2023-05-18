@@ -1,4 +1,4 @@
-package com.direwxlf.springboot.tutorial.departmentapp.controller;
+package com.direwxlf.springboot.tutorial.department.controller;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -6,9 +6,9 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.web.bind.annotation.*;
 
-import com.direwxlf.springboot.tutorial.departmentapp.entity.Department;
-import com.direwxlf.springboot.tutorial.departmentapp.error.DepartmentNotFoundException;
-import com.direwxlf.springboot.tutorial.departmentapp.service.DepartmentService;
+import com.direwxlf.springboot.tutorial.department.entity.Department;
+import com.direwxlf.springboot.tutorial.department.error.DepartmentNotFoundException;
+import com.direwxlf.springboot.tutorial.department.service.DepartmentService;
 
 import javax.validation.Valid;
 import java.util.List;

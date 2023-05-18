@@ -1,11 +1,11 @@
-package com.direwxlf.springboot.tutorial.departmentapp.service;
+package com.direwxlf.springboot.tutorial.department.service;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import com.direwxlf.springboot.tutorial.departmentapp.entity.Department;
-import com.direwxlf.springboot.tutorial.departmentapp.error.DepartmentNotFoundException;
-import com.direwxlf.springboot.tutorial.departmentapp.repository.DepartmentRepository;
+import com.direwxlf.springboot.tutorial.department.entity.Department;
+import com.direwxlf.springboot.tutorial.department.error.DepartmentNotFoundException;
+import com.direwxlf.springboot.tutorial.department.repository.DepartmentRepository;
 
 import java.util.List;
 import java.util.Objects;

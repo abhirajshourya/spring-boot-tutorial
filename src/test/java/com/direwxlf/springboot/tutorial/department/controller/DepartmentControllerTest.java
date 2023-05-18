@@ -1,4 +1,4 @@
-package com.direwxlf.springboot.tutorial.controller;
+package com.direwxlf.springboot.tutorial.department.controller;
 
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
@@ -9,9 +9,9 @@ import org.springframework.boot.test.mock.mockito.MockBean;
 import org.springframework.http.MediaType;
 import org.springframework.test.web.servlet.MockMvc;
 
-import com.direwxlf.springboot.tutorial.departmentapp.controller.DepartmentController;
-import com.direwxlf.springboot.tutorial.departmentapp.entity.Department;
-import com.direwxlf.springboot.tutorial.departmentapp.service.DepartmentService;
+import com.direwxlf.springboot.tutorial.department.controller.DepartmentController;
+import com.direwxlf.springboot.tutorial.department.entity.Department;
+import com.direwxlf.springboot.tutorial.department.service.DepartmentService;
 
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.*;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.jsonPath;

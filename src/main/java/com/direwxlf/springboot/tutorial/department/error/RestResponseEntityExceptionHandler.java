@@ -1,4 +1,4 @@
-package com.direwxlf.springboot.tutorial.departmentapp.error;
+package com.direwxlf.springboot.tutorial.department.error;
 
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -8,7 +8,7 @@ import org.springframework.web.bind.annotation.ResponseStatus;
 import org.springframework.web.context.request.WebRequest;
 import org.springframework.web.servlet.mvc.method.annotation.ResponseEntityExceptionHandler;
 
-import com.direwxlf.springboot.tutorial.departmentapp.entity.ErrorMessage;
+import com.direwxlf.springboot.tutorial.department.entity.ErrorMessage;
 
 @ControllerAdvice
 @ResponseStatus

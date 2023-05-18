@@ -1,4 +1,4 @@
-package com.direwxlf.springboot.tutorial.service;
+package com.direwxlf.springboot.tutorial.department.service;
 
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.DisplayName;
@@ -8,10 +8,10 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.boot.test.mock.mockito.MockBean;
 
-import com.direwxlf.springboot.tutorial.departmentapp.entity.Department;
-import com.direwxlf.springboot.tutorial.departmentapp.error.DepartmentNotFoundException;
-import com.direwxlf.springboot.tutorial.departmentapp.repository.DepartmentRepository;
-import com.direwxlf.springboot.tutorial.departmentapp.service.DepartmentService;
+import com.direwxlf.springboot.tutorial.department.entity.Department;
+import com.direwxlf.springboot.tutorial.department.error.DepartmentNotFoundException;
+import com.direwxlf.springboot.tutorial.department.repository.DepartmentRepository;
+import com.direwxlf.springboot.tutorial.department.service.DepartmentService;
 
 import static org.junit.jupiter.api.Assertions.*;
 
