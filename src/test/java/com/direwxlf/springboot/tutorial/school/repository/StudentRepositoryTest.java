@@ -59,4 +59,9 @@ class StudentRepositoryTest {
         List<Student> students = studentRepository.findByFirstNameContaining("oh");
         System.out.println("students: " + students);
     }
+
+    @Test
+    public void updateStudentByEmailId(){
+        studentRepository.updateStudentByEmailId("Mohan", "johndoe@example.com");
+    }
 }
