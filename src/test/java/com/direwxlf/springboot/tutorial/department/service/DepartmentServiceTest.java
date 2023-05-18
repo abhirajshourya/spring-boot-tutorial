@@ -11,11 +11,8 @@ import org.springframework.boot.test.mock.mockito.MockBean;
 import com.direwxlf.springboot.tutorial.department.entity.Department;
 import com.direwxlf.springboot.tutorial.department.error.DepartmentNotFoundException;
 import com.direwxlf.springboot.tutorial.department.repository.DepartmentRepository;
-import com.direwxlf.springboot.tutorial.department.service.DepartmentService;
 
 import static org.junit.jupiter.api.Assertions.*;
-
-import java.util.Optional;
 
 @SpringBootTest
 class DepartmentServiceTest {
@@ -33,15 +30,15 @@ class DepartmentServiceTest {
                 .departmentId(1L)
                 .build();
 
-        Mockito.when(departmentRepository.findById(1L)).thenReturn(Optional.of(department));
+        Mockito.when(departmentRepository.findByDepartmentNameIgnoreCase("IT")).thenReturn(department);
     }
 
     @Test
-    @DisplayName("Get Data based on Valid Department Id")
+    @DisplayName("Get Data based on Valid Department Name")
     public void whenValidDepartmentName_thenDepartmentShouldBeFound() throws DepartmentNotFoundException {
-        Long departmentId = 1L;
-        Department found = departmentService.fetchDepartmentById(departmentId);
+        String departmentName = "IT";
+        Department found = departmentService.fetchDepartmentByName(departmentName);
 
-        assertEquals(departmentId, found.getDepartmentId());
+        assertEquals(departmentName, found.getDepartmentName());
     }
 }

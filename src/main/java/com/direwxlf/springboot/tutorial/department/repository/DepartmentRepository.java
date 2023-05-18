@@ -10,4 +10,6 @@ import com.direwxlf.springboot.tutorial.department.entity.Department;
 @Repository
 public interface DepartmentRepository extends JpaRepository<Department, Long> {
     List<Department> findAllByDepartmentNameIgnoreCase(String departmentName);
+
+    Department findByDepartmentNameIgnoreCase(String departmentName);
 }

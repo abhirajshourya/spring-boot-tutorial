@@ -7,7 +7,6 @@ import org.springframework.boot.test.autoconfigure.orm.jpa.DataJpaTest;
 import org.springframework.boot.test.autoconfigure.orm.jpa.TestEntityManager;
 
 import com.direwxlf.springboot.tutorial.department.entity.Department;
-import com.direwxlf.springboot.tutorial.department.repository.DepartmentRepository;
 
 import static org.junit.jupiter.api.Assertions.*;
 @DataJpaTest

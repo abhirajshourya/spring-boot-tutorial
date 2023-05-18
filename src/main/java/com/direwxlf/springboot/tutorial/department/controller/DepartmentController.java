@@ -48,9 +48,10 @@ public class DepartmentController {
     }
 
     @GetMapping("/departments/name/{name}")
-    public List<Department> fetchDepartmentByName(@PathVariable("name") String departmentName){
-        return departmentService.fetchDepartmentByName(departmentName);
+    public List<Department> fetchDepartmentsByName(@PathVariable("name") String departmentName){
+        return departmentService.fetchDepartmentsByName(departmentName);
     }
+    
     @Value("${welcome.message}")
     private String welcomeMessage;
     @GetMapping("/")
