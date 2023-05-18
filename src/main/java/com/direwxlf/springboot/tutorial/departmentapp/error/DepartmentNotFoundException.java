@@ -1,4 +1,4 @@
-package com.direwxlf.springboot.tutorial.error;
+package com.direwxlf.springboot.tutorial.departmentapp.error;
 
 public class DepartmentNotFoundException extends Exception{
     public DepartmentNotFoundException() {

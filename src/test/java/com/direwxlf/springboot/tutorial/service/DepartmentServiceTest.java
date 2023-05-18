@@ -8,9 +8,10 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.boot.test.mock.mockito.MockBean;
 
-import com.direwxlf.springboot.tutorial.entity.Department;
-import com.direwxlf.springboot.tutorial.error.DepartmentNotFoundException;
-import com.direwxlf.springboot.tutorial.repository.DepartmentRepository;
+import com.direwxlf.springboot.tutorial.departmentapp.entity.Department;
+import com.direwxlf.springboot.tutorial.departmentapp.error.DepartmentNotFoundException;
+import com.direwxlf.springboot.tutorial.departmentapp.repository.DepartmentRepository;
+import com.direwxlf.springboot.tutorial.departmentapp.service.DepartmentService;
 
 import static org.junit.jupiter.api.Assertions.*;
 

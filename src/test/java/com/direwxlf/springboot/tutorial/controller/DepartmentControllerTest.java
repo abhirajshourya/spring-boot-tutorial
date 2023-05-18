@@ -9,8 +9,9 @@ import org.springframework.boot.test.mock.mockito.MockBean;
 import org.springframework.http.MediaType;
 import org.springframework.test.web.servlet.MockMvc;
 
-import com.direwxlf.springboot.tutorial.entity.Department;
-import com.direwxlf.springboot.tutorial.service.DepartmentService;
+import com.direwxlf.springboot.tutorial.departmentapp.controller.DepartmentController;
+import com.direwxlf.springboot.tutorial.departmentapp.entity.Department;
+import com.direwxlf.springboot.tutorial.departmentapp.service.DepartmentService;
 
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.*;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.jsonPath;
