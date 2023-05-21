@@ -21,7 +21,7 @@ public class CourseMaterialRepositoryTest {
                 .credit(6)
                 .build();
         CourseMaterial courseMaterial = CourseMaterial.builder()
-                .url("www.google.com")
+                .url("www.bard.ai")
                 .course(course)
                 .build();
 
