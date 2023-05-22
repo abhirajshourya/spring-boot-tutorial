@@ -5,6 +5,7 @@ import java.util.List;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
+import org.springframework.data.domain.PageRequest;
 
 import com.direwxlf.springboot.tutorial.school.entity.Course;
 import com.direwxlf.springboot.tutorial.school.entity.Teacher;
@@ -33,5 +34,23 @@ public class CourseRepositoryTest {
                 .build();
 
         courseRepository.save(course);
+    }
+
+    @Test
+    public void findAllPagination() {
+        PageRequest firstPageWithThreeRecords = PageRequest.of(0, 3);
+        
+        // this will start from 1th page
+        // PageRequest secondPageWithTwoRecords = PageRequest.of(1, 2);
+
+        List<Course> courses = courseRepository.findAll(firstPageWithThreeRecords).getContent();
+
+        Long totalElements = courseRepository.findAll(firstPageWithThreeRecords).getTotalElements();
+
+        int totalPages = courseRepository.findAll(firstPageWithThreeRecords).getTotalPages();
+
+        System.out.println("Total Courses: " + totalElements);
+        System.out.println("Total Pages: " + totalPages);
+        System.out.println("Courses with Pagination: " + courses);
     }
 }
