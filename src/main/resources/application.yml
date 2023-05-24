@@ -8,7 +8,7 @@ spring:
   datasource:
     driver-class-name: com.mysql.cj.jdbc.Driver
     password: password
-    url: jdbc:mysql://localhost:3306/sprint-tutorial-db?createDatabaseIfNotExist=true
+    url: jdbc:mysql://localhost:3306/spring-tutorial-db?createDatabaseIfNotExist=true
     username: root
   jpa:
     hibernate:
@@ -30,7 +30,7 @@ spring:
   datasource:
     driver-class-name: com.mysql.cj.jdbc.Driver
     password: password
-    url: jdbc:mysql://localhost:3306/sprint-tutorial-db-qa?createDatabaseIfNotExist=true
+    url: jdbc:mysql://localhost:3306/spring-tutorial-db-qa?createDatabaseIfNotExist=true
     username: root
   jpa:
     hibernate:
@@ -47,7 +47,7 @@ spring:
   datasource:
     driver-class-name: com.mysql.cj.jdbc.Driver
     password: password
-    url: jdbc:mysql://localhost:3306/sprint-tutorial-db-prod?createDatabaseIfNotExist=true
+    url: jdbc:mysql://localhost:3306/spring-tutorial-db-prod?createDatabaseIfNotExist=true
     username: root
   jpa:
     hibernate:
