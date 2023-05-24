@@ -7,5 +7,7 @@ import com.direwxlf.springboot.tutorial.userregistration.entity.User;
 
 @Repository
 public interface UserRepository extends JpaRepository<User, Long>{
+
+    User findByEmail(String email);
     
 }
