@@ -7,5 +7,7 @@ import com.direwxlf.springboot.tutorial.userregistration.entity.VerificationToke
 
 @Repository
 public interface VerificationTokenRepository extends JpaRepository<VerificationToken, Long>{
+
+    VerificationToken findByToken(String token);
     
 }
