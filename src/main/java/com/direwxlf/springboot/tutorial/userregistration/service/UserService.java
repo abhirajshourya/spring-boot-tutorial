@@ -1,6 +1,7 @@
 package com.direwxlf.springboot.tutorial.userregistration.service;
 
 import com.direwxlf.springboot.tutorial.userregistration.entity.User;
+import com.direwxlf.springboot.tutorial.userregistration.entity.VerificationToken;
 import com.direwxlf.springboot.tutorial.userregistration.model.UserModel;
 
 public interface UserService {
@@ -10,5 +11,7 @@ public interface UserService {
     void saveVerificationTokenForUser(User user, String token);
 
     String validateVerificationToken(String token);
+
+    VerificationToken generateNewVerificationToken(String oldToken);
     
 }
