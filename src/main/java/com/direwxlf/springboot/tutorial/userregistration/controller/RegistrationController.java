@@ -86,13 +86,10 @@ public class RegistrationController {
     @PostMapping("/savePassword")
     public String savePassword(@RequestParam("token") String token, @RequestBody PasswordModel passwordModel) {
         String result = userService.validatePasswordResetToken(token);
-        
         if (!result.equalsIgnoreCase("valid")) {
             return "Invalid Token";
         }
-        
         Optional<User> user = userService.getUserByPasswordResetToken(token);
-        
         if (user.isPresent()) {
             userService.changePassword(user.get(), passwordModel.getNewPassword());
             return "Password Changed Successfully!";
@@ -100,5 +97,17 @@ public class RegistrationController {
 
         return "Invalid Token";
 
+    }
+
+    @PostMapping("/changePassword")
+    public String changePassword(@RequestBody PasswordModel passwordModel) {
+        User user = userService.findUserByEmail(passwordModel.getEmail());
+        if (!userService.checkIfValidOldPassword(user, passwordModel.getOldPassword())) {
+            return "Invalid Old Password";
+        }
+
+        // Save Password
+        userService.changePassword(user, passwordModel.getNewPassword());
+        return "Password Changed Successfully!";
     }
 }
